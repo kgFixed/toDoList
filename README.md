@@ -12,8 +12,18 @@ This part of the project works, but I will have to do the new detection of relea
 
 - scripts/all_grouped_organisation.py   -> transform json dump to rdf (1 file)
 - scripts/all_separate_organisation.py  -> transform each organisation into rdf (Number_organisation files)
-
 - ror_dump_json/v1.66-2025-05-20-ror-data.json -> ror dump json from https://zenodo.org/records/15475023
+
+### Running
+
+To run the code, go to the central directory of your code and type the following command:
+
+```
+python scripts/all_grouped_organisation.py // to make a general rdf for the ror dump
+python scripts/all_separate_organisation.py // to make rdf file for each organisation of the dump
+```
+
+The result could be visible in folder output_rdf for the general rdf, and into rdf/organisations for each organisation.
 
 ## store_ror.org
 
@@ -30,11 +40,38 @@ I started by going through all my repositories so that I could "study" each json
 - scripts/git_commitpush.py    ->  commit and push to github between releases
 - scripts/release_rdf_push.py  ->  central file, go through the releases ror
 - scripts/template_to_try.py   ->  associates the template with the version of the ror schema
-
 - ror_releases/                ->  all releases from https://github.com/ror-community/ror-records
 - json_schema/                 ->  all json schemas from https://github.com/ror-community/ror-schema
 
-## 
+### Running
 
+To run the code, go to the central directory of your code and type the following command:
+
+```
+python scripts/release_rdf_push.py
+```
+
+This will run the code, and you should see a new .ttl file appear in **folder_to_push**, before it is cleaned up and sent to github.
+
+## kgFixed.github.io
+
+About the Github Page, there's not much to do. In order to make the redirect for w3id.org work, I've made sure to respect a few site content standards. In fact, to prove the interest of this site, I made sure to give a brief introduction to the company as well as the parts I've started to solve. So I've created several pages, one for ror and one for orcid. The more detailed content of these pages still needs to be filled in, but this wasn't intended to be exhaustive for the moment.
+
+The project is being developed in Typescript + React using ViteJS. For the moment, the site is hosted on github at the following address:
+
+```
+https://kgfixed.github.io/
+```
+
+### Running
+
+To start the project locally, please follow these instructions:
+
+```
+cd kgFixed.github.io
+npm i
+npm run build
+nppm run dev
+```
 
 2. What I still have to do
