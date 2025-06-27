@@ -13,6 +13,8 @@ This part of the project works, but I will have to do the new detection of relea
 - scripts/all_grouped_organisation.py   -> transform json dump to rdf (1 file)
 - scripts/all_separate_organisation.py  -> transform each organisation into rdf (Number_organisation files)
 
+- ror_dump_json/v1.66-2025-05-20-ror-data.json -> ror dump json from https://zenodo.org/records/15475023
+
 ## store_ror.org
 
 In this directory, I was able to make a clone of the ror.org directory, containing all the records for all the releases. The format of this data is json. The best thing to do for the future would be to avoid mixing release data directly into the same repository as scripts and other data. The same goes for retrieving schemas that I copy instead of testing them from a remote git repo.
@@ -29,7 +31,10 @@ I started by going through all my repositories so that I could "study" each json
 - scripts/release_rdf_push.py  ->  central file, go through the releases ror
 - scripts/template_to_try.py   ->  associates the template with the version of the ror schema
 
+- ror_releases/                ->  all releases from https://github.com/ror-community/ror-records
+- json_schema/                 ->  all json schemas from https://github.com/ror-community/ror-schema
 
+## 
 
 
 2. What I still have to do
